@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Countdown to Halloween</title>
+</head>
+<body>
+	<h1>Countdown to Halloween</h1>
+	<p id="countdown"></p>
+
+	<script>
+		// Set the date for Halloween (October 31st)
+		var halloweenDate = new Date("2023-10-31");
+
+		// Get the current date
+		var currentDate = new Date();
+
+		// Calculate the difference in days between the two dates
+		var timeDiff = halloweenDate.getTime() - currentDate.getTime();
+		var daysLeft = Math.floor(timeDiff / (1000 * 3600 * 24));
+
+		// Update the HTML with the countdown
+		document.getElementById("countdown").innerHTML = "Only " + daysLeft + " days until Halloween!";
+	</script>
+</body>
+</html>
